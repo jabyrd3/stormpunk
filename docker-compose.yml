@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  stormpunk:
+    image: node:11
+    dns: 8.8.8.8
+    ports:
+      - 9090:9090
+    volumes:
+      - ./server:/server
+      - ./client:/client
+    entrypoint:
+      - /server/start.sh
