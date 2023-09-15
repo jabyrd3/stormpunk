@@ -3,12 +3,13 @@ export default {
   regions: {
     "massholes": {
       cameras: [
+      // {
+      //   "url": "rtsp://69.124.9.156/avn=2",
+      //   "type": "rtsp"
+      // }, 
       {
-        "url": "rtsp://69.124.9.156/avn=2",
-        "type": "rtsp"
-      }, 
-      {
-        "url": "http://98.229.18.194:5000/mjpg/video.mjpg"
+        "url": "http://98.229.18.194:5000/mjpg/video.mjpg",
+        "type": "mjpeg"
       },
       {
         "inject": "<iframe src=\"https://video.nest.com/embedded/live/FcEnfF396B?autoplay=1\"></iframe>",
