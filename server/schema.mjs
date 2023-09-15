@@ -3,10 +3,10 @@ export default {
   regions: {
     "massholes": {
       cameras: [
-      // {
-      //   "url": "rtsp://69.124.9.156/avn=2",
-      //   "type": "rtsp"
-      // }, 
+      {
+        "url": "rtsp://69.124.9.156/avn=2",
+        "type": "rtsp"
+      }, 
       {
         "url": "http://98.229.18.194:5000/mjpg/video.mjpg",
         "type": "mjpeg"
