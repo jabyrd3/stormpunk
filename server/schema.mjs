@@ -17,6 +17,13 @@ export default {
       }
       ]
     },
+    maine: {
+      cameras: [
+      {
+       "type":"mjpeg",
+       "url": "http://139.140.96.6/mjpg/video.mjpg?timestamp=1694812426090" 
+      }]
+    },
     "new brunswick": {
       cameras: 
       [
