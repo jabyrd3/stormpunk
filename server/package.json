@@ -13,9 +13,7 @@
     "mjpeg-proxy": "git+https://github.com/legege/node-mjpeg-proxy",
     "nodemon": "^1.19.1",
     "request": "^2.88.0",
-    "ws": "^7.1.2"
-  },
-  "devDependencies": {
-    "rtsp-relay": "^1.6.1"
+    "ws": "^7.1.2",
+    "rtsp-relay": "1.6.1"
   }
 }

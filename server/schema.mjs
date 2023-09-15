@@ -8,7 +8,7 @@ export default {
         "type": "rtsp"
       }, 
       {
-        "url": "rtsp://rtsp/stream/movie",
+        "url": "rtsp://69.124.9.156/avn=2",
         "type": "rtsp"
       }, 
       {

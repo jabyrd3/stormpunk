@@ -72,7 +72,7 @@ export default class WebServer{
          <script src='${scriptUrl}'></script>
          <script>
            loadPlayer({
-                   url: 'wss://' + location.host + '/ws/rtsp/stream/massholes/0',
+                   url: 'ws://' + location.host.split(":")[0] + ':9999/ws/rtsp/stream/massholes/1',
                    canvas: document.getElementById('canvas')
                  });
          </script>
@@ -81,6 +81,6 @@ export default class WebServer{
        `)
     })
     app.listen(9090);
-    wsApp.listen(10000);
+    wsApp.listen(9999);
   }
 }

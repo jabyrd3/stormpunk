@@ -5,6 +5,7 @@ services:
     dns: 8.8.8.8
     ports:
       - 9099:9090
+      - 9999:9999
     volumes:
       - ./server:/server
       - ./client:/client
