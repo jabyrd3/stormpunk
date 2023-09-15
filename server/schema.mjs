@@ -1,31 +1,41 @@
 export default {
-  title: "ukraine, now with rtsp",
+  title: "hurricane lee",
   regions: {
-    kyiv: {
+    "new brunswick": {
       cameras: 
-        [{
-          url:'rtsp://190.46.220.228:554/11',
-          type: 'rtsp'
-        }, {
-          url: 'rtsp://91.145.241.165:554/11',
-          type: 'rtsp'
-        }, {
-          url: 'rtsp://91.145.216.194:554/1/1:1/main',
-          type: 'rtsp'
-        }, {
-          url: 'rtsp://91.145.194.60:554/1',
-          type: 'rtsp'
-        }, 
+      [
         {
-          url: 'rtsp://46.30.166.89/11',
-          type: 'rtsp'
-        },
-          {
-            url: 'rtsp://91.207.66.94/live/ch00_0',
-            type: 'rtsp'
+          "inject": "<iframe src=\"https://g1.ipcamlive.com/player/player.php?alias=loyalistplaza&skin=white&autoplay=1&mute=1&disableuserpause=1\"></iframe>",
+          type: 'inject'
+        }, {
+          "inject": "<iframe src=\"https://g1.ipcamlive.com/player/player.php?alias=partridgeisland&skin=white&autoplay=1&mute=1&disableuserpause=1\"></iframe>",
+          type: 'inject'
 
-          }
-          ]
+        }]
+      // https://g1.ipcamlive.com/player/player.php?alias=partridgeisland&skin=white&autoplay=1&mute=1&disableuserpause=1
+        // [{
+        //   url:'rtsp://190.46.220.228:554/11',
+        //   type: 'rtsp'
+        // }, {
+        //   url: 'rtsp://91.145.241.165:554/11',
+        //   type: 'rtsp'
+        // }, {
+        //   url: 'rtsp://91.145.216.194:554/1/1:1/main',
+        //   type: 'rtsp'
+        // }, {
+        //   url: 'rtsp://91.145.194.60:554/1',
+        //   type: 'rtsp'
+        // }, 
+        // {
+        //   url: 'rtsp://46.30.166.89/11',
+        //   type: 'rtsp'
+        // },
+        //   {
+        //     url: 'rtsp://91.207.66.94/live/ch00_0',
+        //     type: 'rtsp'
+
+        //   }
+        //   ]
     } 
   }}
 //  regions: {

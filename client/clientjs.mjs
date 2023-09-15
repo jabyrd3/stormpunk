@@ -2,11 +2,11 @@ export default schema => `
 	// init
   window.currentIndex = 0
   const schema = ${JSON.stringify(schema, null, 2)}
-  const bodies = Object.keys(schema.regions).map(r=>\`
+  const bodies = Object.keys(schema.regions).map(r=> console.log('jabby', r) || \`
       <div class="tab-body active">
         \$\{schema.regions[r].cameras.map((c, idx) =>
           c.type && c.type==='inject' ?
-          c.inject :
+          \`<div class="flex-item" style="height: 300px;">\$\{c.inject}</div>\` :
           c.type && c.type === 'rtsp' ?
           \` 
                 <div class="flex-item \$\{c.modifier}">

@@ -4,7 +4,7 @@ export default (schema, mpegJSUrl) => `
 <html>
 
 <head>
-    <title>stormpunk | ukraine edition</title>
+    <title>stormpunk</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="change your fucking passwords jesus christ">
@@ -48,7 +48,10 @@ export default (schema, mpegJSUrl) => `
         text-align: center;
         padding-top: 0px;
     }
-
+    .flex-item iframe{
+        width: 100%;
+        height: 300px;
+    }
     .container:not(.nomin) .flex-item:not(:first-child) {
         padding-left: 10px;
     }
@@ -82,6 +85,9 @@ export default (schema, mpegJSUrl) => `
       flex-wrap: wrap;
       flex-direction: row;
       align-items: center;
+    }
+    iframe {
+        border-width: 0px;
     }
     </style>
 </head>
