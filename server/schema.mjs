@@ -13,6 +13,10 @@ export default {
       }, 
       {
         "url": "http://98.229.18.194:5000/mjpg/video.mjpg"
+      },
+      {
+        "inject": "<iframe src=\"https://video.nest.com/embedded/live/FcEnfF396B?autoplay=1\"></iframe>",
+        "type": "inject"
       }
       ]
     },
