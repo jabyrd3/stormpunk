@@ -12,14 +12,12 @@ export default class WebServer{
   constructor(schema){
     this.handlers = ok(schema.regions).reduce((acc, rKey) => {
       return oa({}, acc, schema.regions[rKey].cameras.reduce((acc2, camera, idx)=>{
-          console.log('foop', rKey, idx);
           if(!camera.type || camera.type === 'mjpeg'){
             return oa({}, acc2, {
               [`/${rKey}/${idx}`]: new p.MjpegProxy(camera.url).proxyRequest
             });
           }
           if(camera.type === 'rtsp'){
-            console.log('rtsp url', camera.url)
             return oa({}, acc2, {
               [`/${rKey}/${idx}`]: {
                 ...camera,
@@ -31,15 +29,14 @@ export default class WebServer{
               }
             })
           }
-          return acc;
+          return acc2;
         }, {}))
     }, {});
+    console.log(this.handlers)
     ok(this.handlers).map(hKey=>{
-      console.log('settin up hkey', hKey)
       const region = hKey.split('/')[1];
       const cam = hKey.split('/')[2];
       if(this.handlers[hKey]?.type === 'rtsp'){
-        console.log('setting up handle for', region, cam, this.handlers[hKey])
         return wsApp.ws(`/ws/rtsp/stream/${region}/${cam}`, this.handlers[hKey].proxy)
       }
       app.get(`${hKey}.jpg`, new p.MjpegProxy(schema.regions[region].cameras[cam].url).proxyRequest);
