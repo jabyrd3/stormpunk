@@ -22,7 +22,21 @@ export default {
       {
        "type":"mjpeg",
        "url": "http://139.140.96.6/mjpg/video.mjpg?timestamp=1694812426090" 
+      }, {
+        "type": "mjpeg",
+        "url": "http://142.0.109.159/mjpg/video.mjpg"
       }]
+    },
+    "st-john": {
+      cameras: [
+        {
+          "url": "rtsp://:@142.163.211.246/ch1/01",
+          "type": "rtsp"
+        },]
+    //   {
+    //     "url": "https://184.151.85.97/record/current.jpg?rand=49926",
+    //     type: "poller"
+    //   }]
     },
     "new brunswick": {
       cameras: 
