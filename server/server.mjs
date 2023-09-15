@@ -39,7 +39,7 @@ export default class WebServer{
       const region = hKey.split('/')[1];
       const cam = hKey.split('/')[2];
       if(this.handlers[hKey]?.type === 'rtsp'){
-        console.log('setting up handle for', region, cam)
+        console.log('setting up handle for', region, cam, this.handlers[hKey])
         return wsApp.ws(`/ws/rtsp/stream/${region}/${cam}`, this.handlers[hKey].proxy)
       }
       app.get(`${hKey}.jpg`, new p.MjpegProxy(schema.regions[region].cameras[cam].url).proxyRequest);
@@ -72,7 +72,7 @@ export default class WebServer{
          <script src='${scriptUrl}'></script>
          <script>
            loadPlayer({
-                   url: 'wss://' + location.host + '/ws/rtsp/stream/kyiv/0',
+                   url: 'wss://' + location.host + '/ws/rtsp/stream/massholes/0',
                    canvas: document.getElementById('canvas')
                  });
          </script>

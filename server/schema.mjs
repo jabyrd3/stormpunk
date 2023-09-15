@@ -1,6 +1,21 @@
 export default {
   title: "hurricane lee",
   regions: {
+    "massholes": {
+      cameras: [
+      {
+        "url": "rtsp://98.217.1.189:554/Streaming/Channels/1",
+        "type": "rtsp"
+      }, 
+      {
+        "url": "rtsp://rtsp/stream/movie",
+        "type": "rtsp"
+      }, 
+      {
+        "url": "http://98.229.18.194:5000/mjpg/video.mjpg"
+      }
+      ]
+    },
     "new brunswick": {
       cameras: 
       [

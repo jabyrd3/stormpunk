@@ -10,7 +10,7 @@ export default schema => `
           c.type && c.type === 'rtsp' ?
           \` 
                 <div class="flex-item \$\{c.modifier}">
-                  <canvas id="\$\{r}-\$\{idx}" />
+                  <canvas style="display: block" id="\$\{r}-\$\{idx}" />
                 </div>
             \` : \`
                 <div class="flex-item \$\{c.modifier}">
@@ -49,6 +49,7 @@ export default schema => `
     console.log('jabby', targetRegionKey)
     const targetCams = schema.regions[targetRegionKey].cameras
     targetCams.filter(tc=>tc.type==='rtsp').map((cam, idx) => {
+      console.log('jabby', document.getElementById(\`\$\{targetRegionKey}-\$\{idx}\`))
       loadPlayer({
         url: 'wss://' + location.host + \`/ws/rtsp/stream/\$\{targetRegionKey}/\$\{idx}\`,
         canvas: document.getElementById(\`\$\{targetRegionKey}-\$\{idx}\`)
