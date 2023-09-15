@@ -72,7 +72,7 @@ export default class WebServer{
          <script src='${scriptUrl}'></script>
          <script>
            loadPlayer({
-                   url: 'ws://' + location.host.split(":")[0] + ':9999/ws/rtsp/stream/massholes/1',
+                   url: 'ws://' + location.host.split(":")[0] + ':9999/ws/rtsp/stream/massholes/0',
                    canvas: document.getElementById('canvas')
                  });
          </script>

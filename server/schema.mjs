@@ -4,10 +4,6 @@ export default {
     "massholes": {
       cameras: [
       {
-        "url": "rtsp://98.217.1.189:554/Streaming/Channels/1",
-        "type": "rtsp"
-      }, 
-      {
         "url": "rtsp://69.124.9.156/avn=2",
         "type": "rtsp"
       }, 
