@@ -3,6 +3,7 @@ import p from 'mjpeg-proxy';
 import express from 'express';
 import client from '../client/index.html.mjs';
 const app = express();
+app.use('/client', express.static('../client'));
 const wsApp = express();
 import rtsp from 'rtsp-relay';
 const { proxy, scriptUrl } = rtsp(wsApp, null, 'tcp');
@@ -51,6 +52,7 @@ export default class WebServer{
     app.get('/', (req, res)=>{
       res.send(this.client);
     })
+
     app.get('/test', (req, res) => {
      res.send(`
 <!DOCTYPE html>

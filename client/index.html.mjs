@@ -93,22 +93,16 @@ export default (schema, mpegJSUrl) => `
 </head>
 
 <body>
-    <div class="container">
-        <h1>${schema.title}</h1>
-    </div>
-    <div class="tab-headers">
-      ${Object.keys(schema.regions).map(r=>`<a class="tab-header" onclick="changetab('${r}')" >${r}</a>`).join(' ')}
-    </div>
-    <div class="bodies">
-    </div>
-    </div>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src='${mpegJSUrl}'></script>
     <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function() {
-          ${clientjs(schema)}
-          setTimeout(() => fireUpPlayers(), 0)
-      });
+      // document.addEventListener("DOMContentLoaded", function() {
+      //     ${clientjs(schema)}
+      //     setTimeout(() => fireUpPlayers(), 0)
+      // });
     </script>
+    <script type="text/babel" data-presets="react" data-type="module" src="/client/demo.js" />
 </body>
 
 </html>`;
