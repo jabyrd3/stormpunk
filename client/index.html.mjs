@@ -1,4 +1,4 @@
-import clientjs from './clientjs.mjs';
+// import clientjs from './clientjs.mjs';
 export default (schema, mpegJSUrl) => `
 <!DOCTYPE html>
 <html>
@@ -96,12 +96,6 @@ export default (schema, mpegJSUrl) => `
     <div id="root"></div>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src='${mpegJSUrl}'></script>
-    <script type="text/javascript">
-      // document.addEventListener("DOMContentLoaded", function() {
-      //     ${clientjs(schema)}
-      //     setTimeout(() => fireUpPlayers(), 0)
-      // });
-    </script>
     <script type="text/babel" data-presets="react" data-type="module" src="/client/demo.js" />
 </body>
 
