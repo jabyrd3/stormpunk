@@ -7,7 +7,7 @@ export default (schema, mpegJSUrl) => `
     <title>stormpunk</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="change your fucking passwords jesus christ">
+    <meta name="description" content="webcams i found in the path of storms">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
     body {
