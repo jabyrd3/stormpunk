@@ -23,7 +23,10 @@ function Inject(props){
    return <div className="flex-item" dangerouslySetInnerHTML={{__html: props.camera.inject}}></div>
 }
 function Mjpeg (props){
-   return <div className="flex-item">
+   let [style, setStyle] = useState({});
+   return <div className="flex-item" style={style} onClick={()=> setStyle(style.maxWidth ?
+         {} :
+         {width: '100%', maxWidth: '100%', position: "absolute"})}>
       <img src={`/${props.region}/${props.idx}.jpg`} />
    </div>;
 }
