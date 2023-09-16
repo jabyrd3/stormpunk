@@ -37,7 +37,7 @@ export default {
     //     "url": "https://184.151.85.97/record/current.jpg?rand=49926",
     //     type: "poller"
     //   }]
-    },
+    // },
     "new brunswick": {
       cameras: 
       [
