@@ -3,10 +3,10 @@ export default {
   regions: {
     "massholes": {
       cameras: [
-      {
-        "url": "rtsp://69.124.9.156/avn=2",
-        "type": "rtsp"
-      }, 
+      // {
+      //   "url": "rtsp://69.124.9.156/avn=2",
+      //   "type": "rtsp"
+      // }, 
       {
         "url": "http://98.229.18.194:5000/mjpg/video.mjpg",
         "type": "mjpeg"
@@ -27,12 +27,12 @@ export default {
         "url": "http://142.0.109.159/mjpg/video.mjpg"
       }]
     },
-    "st-john": {
-      cameras: [
-        {
-          "url": "rtsp://:@142.163.211.246/ch1/01",
-          "type": "rtsp"
-        },]
+    // "st-john": {
+    //   cameras: [
+    //     {
+    //       "url": "rtsp://:@142.163.211.246/ch1/01",
+    //       "type": "rtsp"
+    //     },]
     //   {
     //     "url": "https://184.151.85.97/record/current.jpg?rand=49926",
     //     type: "poller"
